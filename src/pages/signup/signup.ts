@@ -11,13 +11,11 @@ import { MainPage } from '../pages';
   templateUrl: 'signup.html'
 })
 export class SignupPage {
-  // The account fields for the login form.
-  // If you're using the username field with or without email, make
-  // sure to add it to the type
+  // los parametros que muestra al crear cuanta
   account: { name: string, email: string, password: string } = {
-    name: 'Test Human',
-    email: 'test@example.com',
-    password: 'test'
+    name: 'test',
+    email: 'Focused@correo.mx',
+    password: 'pass'
   };
 
   // Our translated text strings
@@ -41,7 +39,7 @@ export class SignupPage {
 
       this.navCtrl.push(MainPage);
 
-      // Unable to sign up
+      // imposible iniciar secion
       let toast = this.toastCtrl.create({
         message: this.signupErrorString,
         duration: 3000,
